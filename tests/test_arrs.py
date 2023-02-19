@@ -4,6 +4,7 @@ from utils import arrs
 def test_get():
     assert arrs.get([1, 2, 3], 1, "test") == 2
     assert arrs.get([], -1, "test") == 'test'
+    assert arrs.get([1, 2, 3], 0, "test") == 1
 
 
 def test_slice():
@@ -13,5 +14,3 @@ def test_slice():
     assert arrs.my_slice([], 0) == []
     assert arrs.my_slice([1, 2, 3], -2) == [2, 3]
     assert arrs.my_slice([1, 2, 3], -1) == [3]
-
-
